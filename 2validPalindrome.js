@@ -22,4 +22,4 @@ return true;
 }
 
 
-console.log(validPalindrome("amzizma-"))
+console.log(validPalindrome("eeccccbebaeeabebccccee"))
