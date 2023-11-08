@@ -1,8 +1,8 @@
 export class LinkedListNode{
-    val:number;
+    val:number|null;
     next:LinkedListNode|null;
-    constructor(val:number, next?:LinkedListNode|null){
-        this.val = val;
+    constructor(val?:number, next?:LinkedListNode|null){
+        this.val = (val=== undefined?null:val);
         this.next = (next===undefined?null:next);
     }
 
