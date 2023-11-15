@@ -1,15 +1,15 @@
 import { LinkedListNode } from "./LinkedList";
 
-const node1 = new LinkedListNode(1);
-const node2 = new LinkedListNode(2);
-const node3 = new LinkedListNode(3);
-const node4 = new LinkedListNode(4);
-const node5 = new LinkedListNode(5);
+const node1 = new LinkedListNode(3);
+const node2 = new LinkedListNode(5);
+// const node3 = new LinkedListNode(3);
+// const node4 = new LinkedListNode(4);
+// const node5 = new LinkedListNode(5);
 
 node1.next = node2;
-node2.next = node3;
-node3.next = node4;
-node4.next = node5;
+// node2.next = node3;
+// node3.next = node4;
+// node4.next = node5;
 
 function reverseBetween(
   head: LinkedListNode | null,
@@ -28,6 +28,7 @@ function reverseBetween(
   let counter = 1;
   let start = head;
   let end = head;
+  let returnHead = start;
   
 
   while (current) {
@@ -70,19 +71,20 @@ function reverseBetween(
   
   
   }
-  // console.log(start)
-  // console.log(prev)
+  //console.log(start)
+  console.log(prev)
 
   if (start && start.val){
-    console.log("hey")
+  
     start.next = prev;
    
   }else if(start)
   {
+    console.log("hey")
     start = prev
   }
 
-  return start;
+  return returnHead;
 }
 
-console.log(reverseBetween(node1, 3, 4));
+console.log(reverseBetween(node1, 1, 2));
